@@ -3,25 +3,32 @@
 
 因为修改系统时间需要管理员权限，所以请以管理员身份运行程序。
 
-## 一、前置安装
-
-运行python的安装包（已在文件夹中）安装python，注意pip的钩勾上（默认勾上）；
-
-打开cmd，输入pip install python-docx -i https://pypi.tuna.tsinghua.edu.cn/simple安装docx库；
-
-进入C:\Windows找到py.exe，右键属性->兼容性勾选以管理员身份运行；
-
-## 二、使用步骤
-
 运行前请先确认：
 
 - 源文件为docx格式
-
 - 源文件的最后一行日期处应该为空（2020年 月 日）
 
-操作步骤：
+# 一、安装
 
-- 双击运行CopyHealthCard.py，根据中文提示输入文件的所在位置，回车继续；
+## 1、自动安装
+
+找到文件夹中的一键开始.bat，右键选择以管理员身份运行，根据提示依此安装python，更新pip，安装docx库以及运行健康卡自动复制程序。
+
+注意需要先把每一步的操作做完再在cmd窗口中按回车键继续，否则可能导致程序失效。
+
+## 2、手动安装
+
+运行python的安装包（已在文件夹中）安装python，注意pip的钩勾上（默认勾上）；
+
+打开cmd，输入pip install -i https://pypi.tuna.tsinghua.edu.cn/simple  python-docx 安装docx库；
+
+进入C:\Windows找到py.exe，右键属性->兼容性勾选以管理员身份运行；
+
+双击运行CopyHealthCard.py，
+
+# 二、操作步骤
+
+- 根据中文提示输入文件的所在位置，回车继续；
 - 输入文件保存路径，回车继续；输入保存文件名的前缀，回车继续；
 - 程序会打印word文档中的内容，之后提示输入日期所在的段落，根据打印的word内容确定所在段落，回车继续；
 - 稍等片刻即可得到复制得到的word文档
