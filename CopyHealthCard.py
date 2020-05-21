@@ -23,7 +23,7 @@ def random_time():
 
 addressIn=input("请输入文件绝对地址，注意后缀应该为docx")
 addressOut=input("请输入保存文件的文件夹路径")
-save_name = input("请输入保存的文件名前缀（最终格式为文件名前缀MM-DD)")
+save_name = input("请输入保存的文件名前缀（最终格式为文件名前缀MM月DD日)")
 begin = input("请输入开始日期（YYYY-MM-DD）")
 document=Document(r"%s"%addressIn)
 begin=datetime.strptime('%s'%begin,'%Y-%m-%d')
@@ -44,9 +44,9 @@ for i in range((e - b).days+1):
     paragraphs[par].text = text
 
     if myday.day <10:
-        saveadd=addressOut + "\\" + save_name +  "0%d0%d.docx"%(myday.month, myday.day)
+        saveadd=addressOut + "\\" + save_name +  "%d月%d日.docx"%(myday.month, myday.day)
     else:
-        saveadd = addressOut + "\\" +save_name + "0%d%d.docx"%(myday.month, myday.day)
+        saveadd = addressOut + "\\" +save_name + "%d月%d日.docx"%(myday.month, myday.day)
     date_touple = random_time()
     os.system("date 2020/%d/%d && time %d:%d:%d" %(myday.month, myday.day, date_touple.tm_hour, date_touple.tm_min, date_touple.tm_sec))
     document.save("%s"%saveadd)
