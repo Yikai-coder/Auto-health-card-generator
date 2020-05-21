@@ -12,7 +12,7 @@ import time
 
 def random_time():
     a1=(2020,4,12,8,0,0,0,0,0)    #设置开始日期时间元组（2020-04-12 08：00：00）
-    a2=(2020,4,13,22,0,0,0,0,0)    #设置结束日期时间元组（2020-04-13 22：00：00）
+    a2=(2020,4,12,22,0,0,0,0,0)    #设置结束日期时间元组（2020-04-13 22：00：00）
  
     start=time.mktime(a1)    #生成开始时间戳
     end=time.mktime(a2)      #生成结束时间戳
@@ -22,7 +22,7 @@ def random_time():
     return date_touple
 
 addressIn=input("请输入文件绝对地址，注意后缀应该为docx")
-addressOut=input("请输入保存地址")
+addressOut=input("请输入保存文件的文件夹路径")
 save_name = input("请输入保存的文件名前缀（最终格式为文件名前缀MM-DD)")
 begin = input("请输入开始日期（YYYY-MM-DD）")
 document=Document(r"%s"%addressIn)
